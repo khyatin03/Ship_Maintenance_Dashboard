@@ -58,7 +58,7 @@ This application helps maritime organizations efficiently manage their fleet mai
 ---
 ## Deployed Link
     ```
-   https://ship-maintenance-dashboard-theta.vercel.app/login
+   https://ship-maintenance-dashboard-theta.vercel.app/
    ```
 
 ## Project Structure
