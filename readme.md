@@ -32,8 +32,7 @@ This application helps maritime organizations efficiently manage their fleet mai
 ### Installation Steps
 1. Clone the repository
    ```
-   git clone https://github.com/your-username/ship-maintenance-dashboard.git
-   cd ship-maintenance-dashboard
+   https://github.com/khyatin03/Ship_Maintenance_Dashboard.git
    ```
 
 2. Install dependencies
