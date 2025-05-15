@@ -29,16 +29,21 @@ export default function Charts() {
             max-width: 600px;
             margin: 2rem auto;
             padding: 2rem;
-            background-color: #fff;
+            background-color: var(--card-light, #fff);
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease, color 0.3s ease;
+          }
+
+          html.dark .chart-container {
+            background-color: var(--card-dark, #1f2937);
           }
 
           .chart-title {
             font-size: 1.4rem;
             font-weight: 600;
             margin-bottom: 2rem;
-            color: #333;
+            color: inherit;
             text-align: center;
           }
 
@@ -52,7 +57,7 @@ export default function Charts() {
           .chart-label {
             width: 70px;
             font-size: 0.95rem;
-            color: #666;
+            color: inherit;
             font-weight: 500;
           }
 
@@ -60,16 +65,13 @@ export default function Charts() {
             flex: 1;
             height: 12px;
             border-radius: 6px;
-            background: linear-gradient(to right, #60a5fa, #06b6d4);
+            background: #e5e7eb;
             overflow: hidden;
             position: relative;
           }
 
-          .chart-bar-bg {
-            background: #e5e7eb;
-            border-radius: 6px;
-            width: 100%;
-            height: 100%;
+          html.dark .chart-bar {
+            background: #334155;
           }
 
           .chart-fill {
@@ -83,7 +85,7 @@ export default function Charts() {
             text-align: right;
             font-size: 0.9rem;
             font-weight: 600;
-            color: #222;
+            color: inherit;
           }
         `}
       </style>
@@ -96,9 +98,7 @@ export default function Charts() {
             <div key={p} className="chart-row">
               <span className="chart-label">{p}</span>
               <div className="chart-bar">
-                <div className="chart-bar-bg">
-                  <div className="chart-fill" style={{ width: `${percent}%` }}></div>
-                </div>
+                <div className="chart-fill" style={{ width: `${percent}%` }}></div>
               </div>
               <span className="chart-count">{counts[idx]}</span>
             </div>
